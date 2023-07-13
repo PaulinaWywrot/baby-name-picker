@@ -14,11 +14,10 @@ function App() {
   */
 
   const [searchString, setSearchString] = useState("");
-  console.log(searchString);
   return (
     <div className="App">
       <BabyNameSearch onChange={(event)=>setSearchString(event.target.value)}/>
-      <BabyNames />
+      <BabyNames searchString={searchString}/>
     </div>
   );
 }
