@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+.name-container {
+  display: flex;
+  direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 10px;
+  width: 70%;
+  
+}
+.baby-girl {
+padding-right: 0.5rem;
+padding-left: 0.5rem;
+background-color: rgba(232, 170, 180, 0.902);
+border-radius: 18px;;
+}
+.baby-boy {
+padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: rgba(157, 204, 233, 0.902);
+  border-radius: 18px;;
+}
+

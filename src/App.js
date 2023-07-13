@@ -1,8 +1,12 @@
-import logo from "./logo.svg";
+import BabyNames from "./BabyNames";
 import "./App.css";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <BabyNames />
+    </div>
+  );
 }
 
 export default App;
