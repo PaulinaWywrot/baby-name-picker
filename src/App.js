@@ -4,9 +4,11 @@ import BabyNameSearch from "./babyNameSearch";
 import { useState } from "react";
 
 function App() {
+  const [searchName, setSearchName] = useState("");
   return (
     <div className="App">
-      <BabyNames />
+      <BabyNameSearch setSearchNames={setSearchName} />
+      <BabyNames searchName={searchName} />
     </div>
   );
 }
