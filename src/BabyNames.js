@@ -1,13 +1,11 @@
 import babyNamesData from "./babyNamesData.json";
 import SortAscending from "./Sort";
+// level 1 props & map method
 
-const BabyNames = ({ searchString }) => {
-  const babyNamesFiltered = babyNamesData.filter((babyName) =>
-    babyName.name.toLowerCase().includes(searchString.toLowerCase())
-  );
+const BabyNames = () => {
   return (
     <div className="name-container">
-      {babyNamesFiltered.sort(SortAscending).map((baby) => {
+      {babyNamesData.sort(SortAscending).map((baby) => {
         if (baby.sex === "f") {
           return (
             <span className="baby-girl" key={baby.name}>
@@ -25,5 +23,4 @@ const BabyNames = ({ searchString }) => {
     </div>
   );
 };
-
 export default BabyNames;
