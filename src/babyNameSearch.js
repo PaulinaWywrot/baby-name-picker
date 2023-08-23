@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const BabyNameSearch = ({ setSearchNames }) => {
   return (
     <div>
@@ -7,6 +5,7 @@ const BabyNameSearch = ({ setSearchNames }) => {
         type="search"
         id="gsearch"
         name="gsearch"
+        placeholder="Search for a name"
         onChange={(e) => setSearchNames(e.target.value)}
       />
     </div>

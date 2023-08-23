@@ -1,31 +1,27 @@
-import { useState } from "react";
-import babyNamesData from "./babyNamesData.json";
 import SortAscending from "./Sort";
+
 // level 1 props & map method
 
-const BabyNames = ({ searchName }) => {
-  let filteredNames = babyNamesData.filter((baby) =>
+const BabyNames = ({ searchName, MainList, addToFavourites }) => {
+  let filteredNames = MainList.filter((baby) =>
     baby.name.toLowerCase().includes(searchName.toLowerCase())
   );
 
   return (
     <div className="name-container">
       {filteredNames.sort(SortAscending).map((baby) => {
-        if (baby.sex === "f") {
-          return (
-            <span className="baby-girl" key={baby.name}>
-              {baby.name}
-            </span>
-          );
-        } else {
-          return (
-            <span className="baby-boy" key={baby.name}>
-              {baby.name}
-            </span>
-          );
-        }
+        return (
+          <span
+            className={baby.sex === "f" ? "baby-girl" : "baby-boy"}
+            key={baby.name}
+            onClick={() => addToFavourites(baby)}
+          >
+            {baby.name}
+          </span>
+        );
       })}
     </div>
   );
 };
+
 export default BabyNames;
